@@ -1,5 +1,4 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaPython, FaDatabase, FaJsSquare } from 'react-icons/fa'; // Import icons
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
@@ -11,12 +10,12 @@ import image from '../assets/emmanuel (1).png';
 
 const HomeContainer = styled.div`
   text-align: center;
-  margin-left: 200px; // Ensure the content shifts to the right of the sidebar
+  margin-left: 200px; 
 `;
 
 const WelcomeSection = styled.section`
   display: flex;
-  flex-direction: row; // Align image and text side by side
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 3rem;
@@ -96,12 +95,24 @@ const Home = () => {
           </TextContainer>
         </div>
       </WelcomeSection>
-      <About />
-      <Skills />
-      <Education />
-      <Projects />
-      <Services />
-      <Contact />
+      <section id="about">
+        <About />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="education">
+        <Education />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="services">
+        <Services />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
     </HomeContainer>
   );
 };

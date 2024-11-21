@@ -63,7 +63,7 @@ const SkillItem = styled.li`
     }
 
     @media (max-width: 768px) {
-        max-width: calc(100% - 20px); /* Full width on smaller screens */
+        max-width: calc(100% - 20px); 
     }
 `;
 
@@ -78,7 +78,7 @@ const SkillIcon = styled.div`
     }
 
     @media (max-width: 768px) {
-        font-size: 2.5rem; /* Slightly smaller icon for mobile */
+        font-size: 2.5rem;
     }
 `;
 

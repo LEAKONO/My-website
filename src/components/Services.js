@@ -19,10 +19,10 @@ const Title = styled.h3`
 
 const ServiceGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
-  gap: 2rem; /* Space between the columns */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem; 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; /* Stack into 1 column on small screens */
+    grid-template-columns: 1fr;
   }
 `;
 

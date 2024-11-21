@@ -26,28 +26,45 @@ const Subtitle = styled.h3`
 
 const ProjectsContainer = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 20px; /* Add spacing between cards */
     padding: 20px;
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+    scrollbar-width: thin; /* For modern browsers */
+    scrollbar-color: #ccc #f8f9fa;
+
+    &::-webkit-scrollbar {
+        height: 8px; /* Adjust scrollbar height */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f8f9fa;
+    }
 `;
 
 const ProjectCard = styled.article`
+    flex: 0 0 300px; /* Fixed width for each card */
     background-color: #ffffff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
     text-align: left;
-    flex: 1 1 300px;
     transition: transform 0.2s ease;
+
     &:hover {
         transform: translateY(-5px);
     }
 `;
+
 
 const ProjectImage = styled.img`
     width: 100%;
