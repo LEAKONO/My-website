@@ -1,4 +1,5 @@
 import React from "react";
+import { FaReact, FaNodeJs, FaPython, FaDatabase, FaJsSquare } from 'react-icons/fa'; // Import icons
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
@@ -10,16 +11,17 @@ import image from '../assets/emmanuel (1).png';
 
 const HomeContainer = styled.div`
   text-align: center;
-  margin-left: 200px;  // Make sure the content shifts to the right of the sidebar
+  margin-left: 200px; // Ensure the content shifts to the right of the sidebar
 `;
 
 const WelcomeSection = styled.section`
   display: flex;
-  flex-direction: column;
+  flex-direction: row; // Align image and text side by side
   align-items: center;
+  justify-content: center;
   padding: 3rem;
   background-color: #f8f9fa;
-  animation: fadeIn 1s ease-in-out;
+  margin-top: 20px;
 `;
 
 const ProfilePic = styled.img`
@@ -29,21 +31,46 @@ const ProfilePic = styled.img`
   object-fit: cover;
   border: 5px solid #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin-right: 2rem; 
+`;
+
+const TextContainer = styled.div`
+  width: 300px; 
+  overflow: hidden; 
+  position: relative; 
+`;
+
+const ScrollingText = styled.div`
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 10s linear infinite;
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 `;
 
 const Heading = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #1e90ff;
+  margin: 0;
 `;
 
 const SubHeading = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #2e8b57;
+  margin: 0;
 `;
 
 const Title = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #333;
+  margin: 0;
 `;
 
 const Home = () => {
@@ -51,15 +78,29 @@ const Home = () => {
     <HomeContainer>
       <WelcomeSection>
         <ProfilePic src={image} alt="Profile" />
-        <Heading>HELLO, I'M</Heading>
-        <SubHeading>EMMANUEL LEAKONO</SubHeading>
-        <Title>Full Stack Software Developer</Title>
+        <div>
+          <TextContainer>
+            <ScrollingText>
+              <Heading>HELLO, I'M</Heading>
+            </ScrollingText>
+          </TextContainer>
+          <TextContainer>
+            <ScrollingText>
+              <SubHeading>EMMANUEL LEAKONO</SubHeading>
+            </ScrollingText>
+          </TextContainer>
+          <TextContainer>
+            <ScrollingText>
+              <Title>Full Stack Software Developer</Title>
+            </ScrollingText>
+          </TextContainer>
+        </div>
       </WelcomeSection>
       <About />
-      <Services />
-      <Education />
       <Skills />
+      <Education />
       <Projects />
+      <Services />
       <Contact />
     </HomeContainer>
   );

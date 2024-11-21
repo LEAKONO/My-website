@@ -32,7 +32,8 @@ const Education = () => {
     <EducationSection>
       <Title>Education</Title>
       <EducationList>
-        <EducationItem>Moringa School - Full-Stack Development Bootcamp</EducationItem>
+        <EducationItem>Moringa School - Full-Stack Development</EducationItem>
+        <EducationItem>PLP Academy - Full Stack Development</EducationItem>
         <EducationItem>High School - KCSE Certificate</EducationItem>
       </EducationList>
     </EducationSection>

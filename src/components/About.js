@@ -32,7 +32,18 @@ const About = () => {
         engineering began during my early education, where my interest in
         technology and problem-solving naturally drew me to programming. This
         interest grew significantly when I joined Moringa School, where I spent
-        intensive months sharpening my skills in full-stack development.
+        intensive months sharpening my skills in full-stack development. Through
+        this program, I developed a solid foundation in web technologies like
+        HTML, CSS , JavaScript, React, and Python. I also gained hands-on
+        experience with Git for version control and collaborative coding,
+        database management, and building REST APIs to connect and enhance
+        applications. Moringa School’s emphasis on practical, team-based, and
+        challenging projects taught me how to build scalable and efficient
+        applications that solve complex problems. Today, I am dedicated to
+        leveraging my technical skills and collaborating with other innovators
+        to create impactful software solutions. My ultimate goal is to push the
+        boundaries of technology, contributing to applications that drive both
+        innovation and success.
       </Description>
     </AboutSection>
   );
