@@ -75,6 +75,12 @@ const TopNav = styled.nav`
   width: 100%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   z-index: 1000;
+
+  /* Center logo on smaller screens */
+  @media (max-width: 768px) {
+    justify-content: center; /* Center logo */
+    padding: 1rem; /* Reduced padding */
+  }
 `;
 
 const Hamburger = styled.button`
@@ -84,7 +90,11 @@ const Hamburger = styled.button`
   background: none;
   border: none;
   padding: 0.3rem;
-  
+  position: absolute; 
+  top: 1rem; /* Distance from the top */
+  left: 1rem; /* Distance from the left */
+  z-index: 1100; 
+
   @media (min-width: 769px) {
     display: none;
   }
@@ -93,7 +103,7 @@ const Hamburger = styled.button`
 const Bar = styled.span`
   width: 25px;
   height: 3px;
-  background-color: #fff; /* White bars */
+  background-color: #fff; 
   margin: 3px 0;
   transition: 0.3s;
 `;
@@ -103,12 +113,18 @@ const Logo = styled.a`
   text-decoration: none;
   font-weight: 600;
   font-size: 1.5rem;
+  min-width: 150px;
+
+  /* Make logo smaller on smaller screens */
+  @media (max-width: 768px) {
+    font-size: 1.2rem; /* Reduce font size */
+  }
 `;
 
 const SideNav = styled.div`
   position: fixed;
-  top: 0; /* Align the sidebar directly from the top */
-  left: ${(props) => (props.isOpen ? '0' : '-250px')}; /* Adjust width for smooth toggle */
+  top: 0; 
+  left: ${(props) => (props.isOpen ? '0' : '-250px')}; 
   width: 250px;
   height: 100vh; /* Full height of the viewport */
   background-color: #B0BEC5; /* Light Slate Gray */
@@ -118,7 +134,7 @@ const SideNav = styled.div`
   z-index: 999;
 
   @media (min-width: 769px) {
-    left: 0; /* Always visible on larger screens */
+    left: 0;
   }
 `;
 
@@ -127,7 +143,7 @@ const NavLink = styled.a`
   align-items: center;
   gap: 10px; /* Add spacing between the icon and text */
   margin: 1rem 0;
-  color: ${(props) => (props.home ? '#E64A19' : '#6A1B9A')}; /* Home in Deep Orange, others in Purple */
+  color: ${(props) => (props.home ? '#E64A19' : '#6A1B9A')};
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2rem;
@@ -138,7 +154,6 @@ const NavLink = styled.a`
   }
 
   &:hover {
-    color: #E64A19; /* Change to orange on hover */
+    color: #E64A19; 
   }
 `;
-
