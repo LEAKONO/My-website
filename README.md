@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# My Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a portfolio website built by **Emmanuel Leakono**. The website showcases various sections including **Home**, **About**, **Services**, **Skills**, **Education**, **Projects**, and **Contact**, along with the ability to download the resume. 
 
-## Available Scripts
+## Features of the Navbar
 
-In the project directory, you can run:
+The navbar is a responsive component that includes a **Top Navigation** bar with a logo and a **Side Navigation** bar. The navbar adapts to both small (mobile) and large (desktop) screens with the following features:
 
-### `npm start`
+### 1. **Logo:**
+   - The logo is positioned on the left side of the top navigation on larger screens.
+   - On smaller screens, the logo is centered, and the font size is reduced for better spacing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. **Hamburger Menu:**
+   - On smaller screens (mobile devices), a **hamburger button** appears at the top-left corner of the page.
+   - Clicking the hamburger menu toggles the side navigation (sliding it in and out).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. **Side Navigation (Sidebar):**
+   - The side navigation (or sidebar) contains links to the following sections:
+     - **Home** - The main landing page of the website.
+     - **About** - Information about the website or the owner.
+     - **Services** - A list of services or skills offered.
+     - **Skills** - Showcases technical and soft skills.
+     - **Education** - Displays educational background.
+     - **Projects** - Portfolio of personal or professional projects.
+     - **Contact** - A section with contact information or a contact form.
+     - **Resume** - A link to download the resume in PDF format.
 
-### `npm test`
+### 4. **Responsive Design:**
+   - The navbar adjusts for mobile devices. On screens larger than `768px`, the side navigation remains visible on the left side.
+   - On smaller screens, the side navigation is hidden by default and only appears when the hamburger menu is clicked.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Code Explanation:
 
-### `npm run build`
+Here’s a breakdown of how the navbar is implemented in React with styled-components:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Top Navigation (`TopNav`):
+- The top navigation bar contains the **Logo** and the **Hamburger** menu. The background color is a soft purple (`#6A1B9A`) for a modern look.
+- The hamburger button is positioned at the top-left corner of the screen on mobile devices and controls the toggle of the side navigation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Hamburger Button (`Hamburger`):
+- A simple button that consists of three bars. On click, it toggles the visibility of the side navigation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Side Navigation (`SideNav`):
+- The side navigation is fixed to the left of the screen, and it contains navigation links.
+- The `isOpen` state controls whether the side navigation is visible or hidden on mobile devices.
 
-### `npm run eject`
+#### NavLink Component (`NavLink`):
+- Each link in the side navigation has an icon and text, and the color of the link changes on hover to indicate interactivity.
+- The links are styled dynamically based on their content. For example, the **Home** link has a different color (`#E64A19`) compared to other links (`#6A1B9A`).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## How to Use This Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone this repository to your local machine.
+#####  Install the required dependencies:
+- npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Run the development server:
+- npm start
