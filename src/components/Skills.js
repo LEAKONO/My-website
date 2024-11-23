@@ -34,6 +34,14 @@ const Title = styled.h3`
     font-size: 2rem;
     margin-bottom: 20px;
     color: hsl(123, 89%, 14%);
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.6rem;
+    }
 `;
 
 const SkillList = styled.ul`
@@ -54,7 +62,7 @@ const SkillItem = styled.li`
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    max-width: calc(50% - 20px); /* Two items per row */
+    max-width: calc(33% - 20px); /* Three items per row on larger screens */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
@@ -63,7 +71,11 @@ const SkillItem = styled.li`
     }
 
     @media (max-width: 768px) {
-        max-width: calc(100% - 20px); 
+        max-width: calc(50% - 20px); /* Two items per row on medium screens */
+    }
+
+    @media (max-width: 480px) {
+        max-width: calc(100% - 20px); /* One item per row on small screens */
     }
 `;
 
@@ -80,11 +92,23 @@ const SkillIcon = styled.div`
     @media (max-width: 768px) {
         font-size: 2.5rem;
     }
+
+    @media (max-width: 480px) {
+        font-size: 2rem;
+    }
 `;
 
 const SkillName = styled.span`
     font-size: 1rem;
     color: #333;
+
+    @media (max-width: 768px) {
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+    }
 `;
 
 // Skills Component

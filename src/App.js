@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Lenis from '@studio-freight/lenis';
 import Navbar from './components/Navbar';
@@ -30,8 +30,8 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Navbar className="animate__animated animate__fadeIn" /> {/* Add animation class */}
-                <main className="animate__animated animate__fadeIn"> {/* Add animation class */}
+                <Navbar className="animate__animated animate__fadeIn" />
+                <main className="animate__animated animate__fadeIn">
                     <Home />
                 </main>
             </div>

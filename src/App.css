@@ -1,5 +1,3 @@
-/* App.css */
-
 /* Global Styles */
 html {
   scroll-behavior: smooth;
@@ -23,6 +21,16 @@ a {
   text-decoration: none;
 }
 
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 1rem 0;
+}
+
+p {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
 /* Page Content */
 main {
   flex: 1;
@@ -30,30 +38,72 @@ main {
   font-size: 1rem;
 }
 
-.welcome-section, .about-section {
+.welcome-section,
+.about-section {
   padding: 2.5rem 1rem;
 }
 
-@media (max-width: 992px) {
-  main {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(0, 31, 63, 0.2);
+}
+
+/* Responsive Navbar */
+.navbar .menu-toggle {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
-    align-items: center;
+    gap: 0.5rem;
+    display: none; /* Hide menu by default */
   }
 
-  .navbar li {
-    margin: 0.5rem 0;
+  .navbar ul.open {
+    display: flex;
   }
 
-  main {
-    padding: 0.5rem;
-    font-size: 0.85rem;
+  .navbar .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
   }
 }
 
@@ -67,34 +117,4 @@ footer {
 footer a {
   color: #ffffff;
   margin: 0 0.5rem;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.skills {
-  margin-bottom: 1.25rem;
-}
-
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar li {
-  margin: 0.5rem 0;
-}
-
-.navbar a {
-  color: #333;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-  background-color: rgba(0, 31, 63, 0.2);
 }

@@ -9,17 +9,42 @@ const AboutSection = styled.section`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+    max-width: 95%;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 1rem;
+  }
 `;
 
 const Title = styled.h3`
   font-size: 2rem;
   color: hsl(10, 80%, 50%);
+  
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Description = styled.p`
   font-size: 1rem;
   line-height: 1.6;
   color: #666;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const About = () => {

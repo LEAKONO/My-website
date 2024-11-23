@@ -8,7 +8,7 @@ const Contact = () => {
             <h3>Get In Touch</h3>
             <p>Need to talk or make inquiries on my work?</p>
             <ContactInfo>
-                <ContactLink href="tel:+254 113535094">
+                <ContactLink href="tel:+254113535094">
                     <FaPhone className="contact-icon" /> +254 11 353 5094
                 </ContactLink>
                 <ContactLink href="mailto:leakonoemmanuel3@gmail.com">
@@ -73,6 +73,7 @@ const ContactInfo = styled.div`
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 20px;
 
     @media (max-width: 768px) {
         flex-direction: column;

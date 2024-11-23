@@ -7,11 +7,12 @@ import {
   FaGraduationCap, 
   FaProjectDiagram, 
   FaPhone, 
-  FaBook 
+  FaBook, 
+  FaFileDownload 
 } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true); // Default to open for testing
+  const [isOpen, setIsOpen] = useState(false); // Default to closed for smaller screens
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -48,6 +49,9 @@ const Navbar = () => {
         </NavLink>
         <NavLink href="#contact">
           <FaPhone /> Contact
+        </NavLink>
+        <NavLink href="/Emmanuel.pdf" download>
+          <FaFileDownload /> Resume
         </NavLink>
       </SideNav>
     </>
@@ -103,15 +107,19 @@ const Logo = styled.a`
 
 const SideNav = styled.div`
   position: fixed;
-  top: 4.5rem; /* Align the sidebar directly below the TopNav */
-  left: ${(props) => (props.isOpen ? '0' : '-200px')};
-  width: 200px;
-  height: calc(100vh - 4.5rem); /* Ensures the sidebar stretches full height minus the TopNav height */
+  top: 0; /* Align the sidebar directly from the top */
+  left: ${(props) => (props.isOpen ? '0' : '-250px')}; /* Adjust width for smooth toggle */
+  width: 250px;
+  height: 100vh; /* Full height of the viewport */
   background-color: #B0BEC5; /* Light Slate Gray */
-  padding: 2rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 4.5rem 1rem 2rem; /* Top padding accounts for TopNav height */
   transition: left 0.3s ease;
-  z-index: 999; /* Keep it below the navbar but above the page content */
+  z-index: 999;
+
+  @media (min-width: 769px) {
+    left: 0; /* Always visible on larger screens */
+  }
 `;
 
 const NavLink = styled.a`
@@ -124,7 +132,7 @@ const NavLink = styled.a`
   font-weight: 600;
   font-size: 1.2rem;
   transition: color 0.3s ease;
-  
+
   svg {
     font-size: 1.5rem;
   }
@@ -133,3 +141,4 @@ const NavLink = styled.a`
     color: #E64A19; /* Change to orange on hover */
   }
 `;
+

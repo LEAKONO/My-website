@@ -10,7 +10,15 @@ import image from '../assets/emmanuel (1).png';
 
 const HomeContainer = styled.div`
   text-align: center;
-  margin-left: 200px; 
+  margin-left: 200px;
+
+  @media (max-width: 1200px) {
+    margin-left: 100px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
 
 const WelcomeSection = styled.section`
@@ -21,6 +29,11 @@ const WelcomeSection = styled.section`
   padding: 3rem;
   background-color: #f8f9fa;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
 `;
 
 const ProfilePic = styled.img`
@@ -30,20 +43,32 @@ const ProfilePic = styled.img`
   object-fit: cover;
   border: 5px solid #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  margin-right: 2rem; 
+  margin-right: 2rem;
+
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 `;
 
 const TextContainer = styled.div`
-  width: 300px; 
-  overflow: hidden; 
-  position: relative; 
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const ScrollingText = styled.div`
   display: inline-block;
   white-space: nowrap;
   animation: scrollText 10s linear infinite;
-  
+
   @keyframes scrollText {
     0% {
       transform: translateX(100%);
@@ -58,18 +83,30 @@ const Heading = styled.h1`
   font-size: 2rem;
   color: #1e90ff;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const SubHeading = styled.h2`
   font-size: 1.5rem;
   color: #2e8b57;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Title = styled.h3`
   font-size: 1.2rem;
   color: #333;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const Home = () => {
