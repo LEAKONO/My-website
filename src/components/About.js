@@ -59,7 +59,7 @@ const About = () => {
         interest grew significantly when I joined Moringa School, where I spent
         intensive months sharpening my skills in full-stack development. Through
         this program, I developed a solid foundation in web technologies like
-        HTML, CSS , JavaScript, React,Express and Python. I also gained hands-on
+        HTML, CSS , JavaScript, React, Express and Python. I also gained hands-on
         experience with Git for version control and collaborative coding,
         database management, and building REST APIs to connect and enhance
         applications. Moringa School’s emphasis on practical, team-based, and
