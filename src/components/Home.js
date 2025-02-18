@@ -48,8 +48,8 @@ const ProfilePic = styled.img`
   @media (max-width: 768px) {
     width: 120px;
     height: 120px;
-    margin-right: 0;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;  /* Centers image */
+    display: block;
   }
 `;
 

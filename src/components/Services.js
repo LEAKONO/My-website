@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const ServicesSection = styled.section`
-  background-color: #fff;
+  background-color: #121212;
   padding: 3rem 2rem;
   max-width: 1000px;
   margin: 2rem auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   @media (max-width: 1024px) {
     padding: 2rem;
   }
@@ -31,22 +31,27 @@ const Title = styled.h3`
 
 const ServiceGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 2rem; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; 
-    gap: 1.5rem; 
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 `;
 
 const ServiceCard = styled.div`
-  background-color: #f8f9fa;
+  background-color: #1e1e1e;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(30, 144, 255, 0.9);
+  }
   @media (max-width: 768px) {
     padding: 1.2rem;
   }
@@ -66,7 +71,7 @@ const ServiceTitle = styled.h4`
 
 const ServiceDescription = styled.p`
   font-size: 1rem;
-  color: #333;
+  color: #ddd;
   line-height: 1.6;
   @media (max-width: 768px) {
     font-size: 0.95rem;
@@ -84,19 +89,19 @@ const Services = () => {
         <ServiceCard>
           <ServiceTitle>Web Development</ServiceTitle>
           <ServiceDescription>
-            I specialize in creating fully responsive and user-friendly websites using the latest web technologies. Whether you're looking for a personal blog, a portfolio, or a business website, I ensure your online presence is professional, efficient, and tailored to your needs.
+            I specialize in creating fully responsive and user-friendly websites using the latest web technologies.
           </ServiceDescription>
         </ServiceCard>
         <ServiceCard>
           <ServiceTitle>API Design</ServiceTitle>
           <ServiceDescription>
-            I design and develop scalable, maintainable, and well-documented APIs. My focus is on creating robust RESTful APIs that provide seamless integration with other systems, enabling smooth communication between your front-end and back-end services.
+            I design and develop scalable, maintainable, and well-documented APIs.
           </ServiceDescription>
         </ServiceCard>
         <ServiceCard>
           <ServiceTitle>Database Management</ServiceTitle>
           <ServiceDescription>
-            I offer database management services that ensure your data is properly structured, optimized, and secure. Whether you're building a new database or need help optimizing an existing one, I ensure your data management is efficient and scalable for future growth.
+            I offer database management services that ensure your data is structured, optimized, and secure.
           </ServiceDescription>
         </ServiceCard>
       </ServiceGrid>
