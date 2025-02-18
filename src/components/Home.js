@@ -127,7 +127,7 @@ const Home = () => {
           </TextContainer>
           <TextContainer>
             <ScrollingText>
-              <Title>Full Stack Software Developer</Title>
+              <Title>Full Stack Software Engineer</Title>
             </ScrollingText>
           </TextContainer>
         </div>
